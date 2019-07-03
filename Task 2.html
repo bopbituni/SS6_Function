@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr2 = [2,12,6,9,20,56,89];
+        let min = minArray(arr2);
+        alert("So be nhat la: "+min);
+        function minArray(arr) {
+            let min = arr[0];
+            for (let i = 0; i < arr2.length; i++){
+                if(min>arr2[i]){
+                    min = arr[i]
+                }
+            }
+            return min;
+        }
+    </script>
+</body>
+</html>
