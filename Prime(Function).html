@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime</title>
+</head>
+<body>
+<script>
+    let inputnumbers = prompt("Xin moi nhap so : ");
+    inputnumbers = inputnumbers.split(" ");
+    let SNT = findSNT(inputnumbers);
+    alert("Nhung so nguyen to la: " + SNT);
+
+    function findSNT(find)
+    {
+        let arr = [];
+        let snt = find[0];
+        for (let i = 1; i < find.length; i++)
+        {
+            if (snt == 2)
+            {
+                arr.push(snt);
+            }
+            else if (snt > 2)
+            {
+                for (let j = 2; j < Math.sqrt(snt); j++)
+                {
+                    if (snt % j == 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        arr.push(snt);
+                    }
+                }
+            }
+            snt = find[i];
+        }
+        return arr;
+    }
+</script>
+</body>
+</html>
